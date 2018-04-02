@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: java-demo
+  namespace: default
+spec:
+  ports:
+  - port: 80
+    targetPort: 8080
+    name: java-demo
+  selector:
+    app: java-demo
+  type: LoadBalancer
